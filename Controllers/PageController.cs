@@ -16,8 +16,7 @@ namespace Salomon_Porfolio.Controllers
         [HttpPost]
         public void MailSender(ContactFormVm form)
         {
-            try
-            {
+           
 
 
                 var mailMessage = new MailMessage("keyassemahes@gmail.com", "keyassemahes@gmail.com", form.Email, form.Body);
@@ -43,12 +42,7 @@ namespace Salomon_Porfolio.Controllers
                 mailFromMe.IsBodyHtml = true;
                 client.Send(mailFromMe);
 
-            }
-            catch (Exception)
-            {
-                throw new Exception("something went wrong");
-            }
-
+         
 
 
         }
